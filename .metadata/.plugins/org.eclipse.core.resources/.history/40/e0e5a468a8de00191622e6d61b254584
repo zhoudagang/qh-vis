@@ -1,0 +1,13 @@
+package com.qh.cn;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class QhApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(QhApplication.class, args);
+	}
+
+}

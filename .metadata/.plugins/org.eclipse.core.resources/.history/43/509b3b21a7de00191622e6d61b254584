@@ -1,0 +1,23 @@
+package com.qh.cn.entity;
+
+import lombok.Data;
+
+@Data
+public class VerificationTaskInfo {
+
+	private String VerificationTaskNumber; // 检定任务单号
+	
+	private String b;  // 任务开始
+	private String d; // 任务结束日期
+	private String l; // 任务类型
+	private String e; // 到货批次
+	private String f; // 设备规格
+	private String g; // 通讯规约
+	private String h; // 任务数量
+	private String q; // 已检定数量
+	private String w; // 合格数量
+	private String u; // 不合同数量
+	private String u1; // 检定人员
+	private String u2; // 核验人员
+
+}

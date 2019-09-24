@@ -1,0 +1,21 @@
+package com.qh.cn.entity;
+
+import lombok.Data;
+
+@Data
+public class VerificationTaskInfo {
+
+	private String aa; // 鉴定任务单号
+	private String b; 
+	private String d; 
+	private String l; 
+	private String e; 
+	private String f; 
+	private String g; 
+	private String h; 
+	private String q; 
+	private String w; 
+	private String u; 
+	
+	
+}

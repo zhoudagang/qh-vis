@@ -1,0 +1,23 @@
+package com.qh.cn.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.originaltek.cn.web.entity.Student;
+import com.originaltek.cn.web.mapper.StudentMapper;
+import com.originaltek.cn.web.service.StudentService;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+    @Autowired
+    private StudentMapper studentMapper;
+
+    @Override
+    public List<Student> queryStudentList() {
+        return studentMapper.selectList(null);
+    }
+
+}

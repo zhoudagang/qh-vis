@@ -1,0 +1,5 @@
+package com.qh.cn.entity;
+
+public class VerificationTaskInfo {
+
+}

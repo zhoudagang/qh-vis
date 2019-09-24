@@ -1,0 +1,10 @@
+package com.qh.cn.service;
+
+import java.util.List;
+
+import com.originaltek.cn.web.entity.Student;
+
+public interface StudentService {
+
+	List<Student> queryStudentList();
+}
