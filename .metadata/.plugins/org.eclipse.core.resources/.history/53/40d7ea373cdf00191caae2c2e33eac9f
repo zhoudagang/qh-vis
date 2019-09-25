@@ -1,0 +1,20 @@
+package com.qh.cn.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerMapper extends PagingAndSortingRepository<VerificationTaskInfo, Long> {
+
+	@Select("SELECT * FROM VERIFICATION_NUM ")
+	VerificationNum getNum();
+
+	@Select("SELECT * FROM VERIFICATION_TASK_INFO ")
+	Page<VerificationTaskInfo> listTaskInfo(String keyword, Pageable pageable);
+
+}

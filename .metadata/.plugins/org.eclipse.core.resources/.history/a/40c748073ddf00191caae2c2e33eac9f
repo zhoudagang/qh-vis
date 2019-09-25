@@ -1,0 +1,9 @@
+package com.qh.cn.dao;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerDao extends PagingAndSortingRepository<VerificationTaskInfo, Long> {
+
+}

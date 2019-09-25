@@ -1,0 +1,43 @@
+package com.qh.cn.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.qh.cn.beans.PageReq;
+import com.qh.cn.beans.PageResp;
+import com.qh.cn.beans.ResultBean;
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+import com.qh.cn.service.VerService;
+
+@Controller
+public class VerController {
+
+	@GetMapping("/index")
+	public String index() {
+		return "index";
+	}
+
+	@Autowired
+	private VerService verService;
+
+	
+	
+	@GetMapping("/queryVerificationNum")
+	@ResponseBody
+	public ResultBean<VerificationNum> queryVerificationNum() {
+		
+		return new ResultBean<>(verService.getVerificationNum());
+	}
+	
+
+	@GetMapping(value = "/list")
+	@ResponseBody
+	public ResultBean<PageResp<VerificationTaskInfo>> list(PageReq param) {
+		
+		return new ResultBean<>(verService.listPage(param.toPageable(), param.getKeyword()));
+	}
+
+}

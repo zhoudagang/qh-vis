@@ -1,0 +1,13 @@
+package com.qh.cn.entity;
+
+import lombok.Data;
+
+@Data
+public class VerificationNum {
+
+	// 检定计划数量
+	private String verificationPlanNum;
+	
+	// 检定完成数量
+	private String verificationFinishNum;
+}

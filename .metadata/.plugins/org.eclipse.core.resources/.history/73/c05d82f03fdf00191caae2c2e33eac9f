@@ -1,0 +1,11 @@
+package com.qh.cn.service;
+
+import com.qh.cn.entity.VerificationNum;
+
+public interface VerService {
+
+	VerificationNum getVerificationNum();
+
+	// PageResp<VerificationTaskInfo> listPage(Pageable pageable);
+
+}

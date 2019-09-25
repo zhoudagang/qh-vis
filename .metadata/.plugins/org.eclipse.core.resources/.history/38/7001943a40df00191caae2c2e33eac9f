@@ -1,0 +1,8 @@
+package com.qh.cn.mapper;
+
+public class Snippet {
+	public static void main(String[] args) {
+		verMapper
+	}
+}
+

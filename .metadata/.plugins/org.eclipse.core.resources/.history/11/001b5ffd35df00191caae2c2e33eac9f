@@ -1,0 +1,10 @@
+package com.qh.cn.entity;
+
+import lombok.Data;
+
+@Data
+public class VerificationNum {
+
+	private String verificationPlanNum;
+	private String verificationFinishNum; 
+}

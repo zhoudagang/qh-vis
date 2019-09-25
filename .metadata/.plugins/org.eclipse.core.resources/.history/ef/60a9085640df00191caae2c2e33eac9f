@@ -1,0 +1,14 @@
+package com.qh.cn.mapper;
+
+import org.apache.ibatis.annotations.Select;
+
+import com.qh.cn.entity.VerificationNum;
+
+public interface VerMapper {
+
+	@Select("SELECT * FROM VERIFICATION_NUM ")
+	VerificationNum getNum();
+	
+	
+
+}

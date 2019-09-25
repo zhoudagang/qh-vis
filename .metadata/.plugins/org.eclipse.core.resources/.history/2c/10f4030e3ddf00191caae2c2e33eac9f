@@ -1,0 +1,16 @@
+package com.qh.cn.mapper;
+
+import org.apache.ibatis.annotations.Select;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerMapper {
+
+	@Select("SELECT * FROM VERIFICATION_NUM ")
+	VerificationNum getNum();
+
+}

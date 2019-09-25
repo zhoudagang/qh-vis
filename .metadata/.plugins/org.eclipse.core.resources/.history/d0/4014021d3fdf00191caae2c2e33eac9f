@@ -1,0 +1,5 @@
+package com.qh.cn.config;
+
+public class MybatisPlusConfig {
+
+}

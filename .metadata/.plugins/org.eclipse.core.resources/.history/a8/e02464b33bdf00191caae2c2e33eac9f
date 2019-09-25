@@ -1,0 +1,29 @@
+package com.qh.cn.service.impl;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.qh.cn.beans.PageResp;
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+import com.qh.cn.service.VerService;
+
+@Service
+public class VerServiceImpl implements VerService {
+
+	
+	
+	
+	@Override
+	public VerificationNum getVerificationNum() {
+		
+		return null;
+	}
+
+	@Override
+	public PageResp<VerificationTaskInfo> listPage(Pageable pageable, String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

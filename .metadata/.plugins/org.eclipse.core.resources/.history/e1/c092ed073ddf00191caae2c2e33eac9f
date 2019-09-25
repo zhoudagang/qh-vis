@@ -1,0 +1,15 @@
+package com.qh.cn.dao;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerDao extends PagingAndSortingRepository<VerificationTaskInfo, Long> {
+
+	
+	@Query("SELECT * FROM VERIFICATION_TASK_INFO ")
+	Page<VerificationTaskInfo> listTaskInfo(Pageable pageable);
+}

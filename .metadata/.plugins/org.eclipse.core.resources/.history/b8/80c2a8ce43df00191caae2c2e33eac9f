@@ -1,0 +1,46 @@
+package com.qh.cn.service.impl;
+
+import java.math.BigDecimal;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+import com.qh.cn.mapper.VerMapper;
+import com.qh.cn.mapper.VerTaskInfoMapper;
+import com.qh.cn.service.VerService;
+
+@Service
+public class VerServiceImpl implements VerService {
+
+	@Autowired
+	private VerMapper verMapper;
+
+	@Autowired
+	private VerTaskInfoMapper verTaskInfoMapper;
+
+	@Override
+	public VerificationNum getVerificationNum() {
+		VerificationNum num = verMapper.getNum();
+		
+		num.getVerificationFinishNum()	 / num.getVerificationPlanNum();
+		num.setPercent(percent);
+		return 
+	}
+
+	@Override
+	public IPage<VerificationTaskInfo> findByPage(Page<VerificationTaskInfo> page) {
+		return verTaskInfoMapper.selectPage(page, null);
+	}
+	
+	
+	
+	 private double deciMal(int top, int below) {
+	        double result = new BigDecimal((float)top / below).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+	        return result;
+	    }
+
+}

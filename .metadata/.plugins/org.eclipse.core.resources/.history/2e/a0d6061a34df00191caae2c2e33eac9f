@@ -1,0 +1,31 @@
+package com.qh.cn.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.qh.cn.beans.ResultBean;
+import com.qh.cn.entity.VerificationNum;
+
+@Controller
+public class VerController {
+
+	@GetMapping("/index")
+	public String index() {
+		return "index";
+	}
+
+	@GetMapping("/queryVerificationNum")
+	@ResponseBody
+	public ResultBean<VerificationNum> queryVerificationNum() {
+		return "a";
+	}
+
+	
+	@GetMapping("/a")
+	@ResponseBody
+	public String a() {
+		return "a";
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.qh.cn.mapper;
+
+public interface VerTaskInfoMapper {
+
+}

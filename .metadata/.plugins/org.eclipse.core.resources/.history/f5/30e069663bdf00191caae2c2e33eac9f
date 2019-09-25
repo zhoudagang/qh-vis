@@ -1,0 +1,21 @@
+package com.qh.cn.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+@Mapper
+public interface VerMapper {
+
+	@Select("SELECT * FROM VERIFICATION_NUM ")
+	VerificationNum getNum();
+	
+	
+	@Select("SELECT * FROM VERIFICATION_TASK_INFO ")
+	List<VerificationTaskInfo> listTaskInfo();
+
+}

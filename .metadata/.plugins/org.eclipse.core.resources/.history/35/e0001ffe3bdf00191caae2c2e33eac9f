@@ -1,0 +1,15 @@
+package com.qh.cn.service;
+
+import org.springframework.data.domain.Pageable;
+
+import com.qh.cn.beans.PageResp;
+import com.qh.cn.entity.VerificationNum;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerService {
+
+	VerificationNum getVerificationNum();
+
+	PageResp<VerificationTaskInfo> listPage(Pageable pageable, String keyword);
+
+}

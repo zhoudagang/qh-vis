@@ -1,47 +1,48 @@
 package com.qh.cn.entity;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 public class VerificationTaskInfo {
 
-	// 检定任务单号
-	private String VerificationTaskNumber;
+	@ApiModelProperty("检定任务单号")
+	private String verificationTaskNumber;
 
-	// 任务开始日期
-	private String TaskStartDate;
+	@ApiModelProperty("任务开始日期")
+	private String taskStartDate;
 
-	// 任务结束日期
-	private String TaskEndDate;
+	@ApiModelProperty("任务结束日期")
+	private String taskEndDate;
 
-	// 任务类型
-	private String TaskType;
+	@ApiModelProperty("任务类型")
+	private String taskType;
 
-	// 到货批次
-	private String AogBatch;
+	@ApiModelProperty("到货批次")
+	private String aogBatch;
 
-	// 设备规格
-	private String Specification;
+	@ApiModelProperty("设备规格")
+	private String specification;
 
-	// 通讯规约
-	private String Modbus;
+	@ApiModelProperty("通讯规约")
+	private String modbus;
 
-	// 任务数量
-	private String TaskNum;
+	@ApiModelProperty("任务数量")
+	private String taskNum;
 
-	// 已检定数量
-	private String VerifiedQuantity;
+	@ApiModelProperty("已检定数量")
+	private String verifiedQuantity;
 
-	// 合格数量
-	private String QualifiedNum;
+	@ApiModelProperty("合格数量")
+	private String qualifiedNum;
 
-	// 不合同数量
-	private String DisQualifiedNum;
+	@ApiModelProperty("不合同数量")
+	private String disQualifiedNum;
 
-	// 检定人员
-	private String VerificationPerson;
+	@ApiModelProperty("检定人员")
+	private String verificationPerson;
 
-	// 核验人员
-	private String CheckPerson;
+	@ApiModelProperty("核验人员")
+	private String checkPerson;
 
 }

@@ -1,0 +1,7 @@
+package com.qh.cn.service;
+
+public interface VerService {
+
+	
+	
+}

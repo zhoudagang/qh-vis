@@ -1,0 +1,15 @@
+package com.qh.cn.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.qh.cn.entity.VerificationNum;
+
+@Mapper
+public class VerMapper {
+
+	@Select("")
+	public VerificationNum getNum();
+	
+	
+	
+}
