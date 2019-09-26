@@ -1,6 +1,7 @@
 package com.qh.cn.service.impl;
 
 import java.text.NumberFormat;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,17 +30,23 @@ public class VerServiceImpl implements VerService {
 		return num;
 	}
 
-	@Override
-	public IPage<VerificationTaskInfo> findByPage(Page<VerificationTaskInfo> page) {
-		return verTaskInfoMapper.selectPage(page, null); 
-	}
-
 	private String deciMal(int top, int below) {
 		NumberFormat numberFormat = NumberFormat.getInstance();
 		// 设置精确到小数点后2位
 		numberFormat.setMaximumFractionDigits(2);
 		String result = numberFormat.format((float) top / (float) below * 100);
 		return result + "%";
+	}
+
+	@Override
+	public IPage<VerificationTaskInfo> queryPage(int pageNo, int pageSize) {
+		IPage<VerificationTaskInfo> iPage = new Page<>(pageNo, pageSize);
+		// 另外一种写法
+		// IPage<VerificationTaskInfo> selectPage = verTaskInfoMapper.selectPage(iPage, null);
+		// return selectPage;
+		List<VerificationTaskInfo> list = verTaskInfoMapper.queryPage(iPage);
+		iPage.setRecords(list);
+		return iPage;
 	}
 
 }

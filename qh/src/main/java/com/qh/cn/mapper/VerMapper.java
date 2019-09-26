@@ -7,7 +7,7 @@ import com.qh.cn.entity.VerificationNum;
 
 public interface VerMapper extends BaseMapper<VerificationNum> {
 
-	@Select("SELECT * FROM VERIFICATION_NUM ")
+	@Select("SELECT * FROM VERIFICATION ")
 	VerificationNum getNum();
 
 }

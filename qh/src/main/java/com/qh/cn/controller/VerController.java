@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qh.cn.beans.ResultBean;
 import com.qh.cn.entity.VerificationNum;
 import com.qh.cn.entity.VerificationTaskInfo;
@@ -29,7 +28,7 @@ public class VerController {
 	@GetMapping("/queryVerNum")
 	@ResponseBody
 	public ResultBean<VerificationNum> queryVerNum(HttpServletResponse response) {
-		response.addHeader("Access-Control-Allow-Origin", "*");
+		
 		return new ResultBean<VerificationNum>(verService.getVerificationNum());
 	}
 
@@ -38,9 +37,8 @@ public class VerController {
 	public ResultBean<IPage<VerificationTaskInfo>> queryVerTaskPage(HttpServletResponse response,
 			@RequestParam(value = "pageNo", required = true) int pageNo,
 			@RequestParam(value = "pageSize", required = true) int pageSize) {
-		response.addHeader("Access-Control-Allow-Origin", "*");
-		Page<VerificationTaskInfo> page = new Page<>(pageNo, pageSize);
-		return new ResultBean<IPage<VerificationTaskInfo>>(verService.findByPage(page));
+		
+		return new ResultBean<IPage<VerificationTaskInfo>>(verService.queryPage(pageNo, pageSize));
 	}
 
 }

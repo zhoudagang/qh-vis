@@ -1,0 +1,12 @@
+package com.qh.cn.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerTaskInfoMapper extends BaseMapper<VerificationTaskInfo> {
+
+	
+	IPage<VerificationTaskInfo> selectPage(Page<VerificationTaskInfo> page);
+}

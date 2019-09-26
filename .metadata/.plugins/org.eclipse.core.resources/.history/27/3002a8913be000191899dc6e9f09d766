@@ -1,0 +1,14 @@
+package com.qh.cn.mapper;
+
+import org.apache.ibatis.annotations.Select;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.qh.cn.entity.VerificationTaskInfo;
+
+public interface VerTaskInfoMapper extends BaseMapper<VerificationTaskInfo> {
+
+	@Select("SELECT * FROM ( SELECT TMP.*, ROWNUM ROW_ID FROM ( SELECT verification_task_number,task_start_date,task_end_date,task_type,aog_batch,specification,modbus,task_num,verified_quantity,qualified_num,dis_qualified_num,verification_person,check_person FROM VERIFICATION_TASK ) TMP WHERE ROWNUM <=10) WHERE ROW_ID > 0")
+	IPage<VerificationTaskInfo> selectPageOn(Page<VerificationTaskInfo> page);
+}
