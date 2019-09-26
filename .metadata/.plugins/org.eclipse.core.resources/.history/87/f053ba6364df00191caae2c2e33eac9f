@@ -1,0 +1,8 @@
+package com.qh.cn.common.advice;
+
+public class Snippet {
+	public static void main(String[] args) {
+		GlobalExceptionHandler 
+	}
+}
+

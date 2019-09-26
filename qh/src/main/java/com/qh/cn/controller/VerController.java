@@ -20,7 +20,7 @@ public class VerController {
 
 	@GetMapping("/index")
 	public String index() {
-		return "index";
+		return "home";
 	}
 
 	@Autowired

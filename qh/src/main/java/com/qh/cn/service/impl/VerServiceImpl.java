@@ -31,7 +31,7 @@ public class VerServiceImpl implements VerService {
 
 	@Override
 	public IPage<VerificationTaskInfo> findByPage(Page<VerificationTaskInfo> page) {
-		return verTaskInfoMapper.selectPage(page, null);
+		return verTaskInfoMapper.selectPage(page, null); 
 	}
 
 	private String deciMal(int top, int below) {
